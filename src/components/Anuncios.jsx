@@ -1,55 +1,9 @@
 import { Link } from "react-router-dom";
 
-export default function Anuncios() {
-  const team = [
-    {
-      id: 1,
-      photo: "https://m.media-amazon.com/images/I/518EG-3UJQL._AC_SX679_.jpg",
-      title: "Notebook Acer gamer i5",
-      price: 3000.0,
-      description:
-        "Vendo notebook em excelentes condições de uso. Muito novo!!! Pra vender hoje!",
-      local: "Fortaleza, CE",
-      slug: "notebook-acer-gamer",
-      createdAt: "28/08/2026",
-    },
-    {
-      id: 2,
-      photo: "https://m.media-amazon.com/images/I/61YULkQowXL._AC_SX679_.jpg",
-      title: "Mouse logitech m5",
-      price: 200.0,
-      description: "Mouse logitech para venda, melhor não existe.",
-      local: "Fortaleza, CE",
-      slug: "mouse-logitech",
-      createdAt: "20/04/2026",
-    },
-    {
-      id: 3,
-      photo:
-        "https://m.media-amazon.com/images/I/51QQAhxiXDL._AC_SY300_SX300_QL70_ML2_.jpg",
-      title: "Monitor LG GAMER 24 polegadas",
-      price: 1800.0,
-      description: "Vendo monitor 120hz gamer, marca LG",
-      slug: "monitor-lg-gamer",
-      local: "Fortaleza, CE",
-      createdAt: "22/04/2026",
-    },
-    {
-      id: 4,
-      photo: "https://m.media-amazon.com/images/I/51nhfUHjZJL._AC_SX679_.jpg",
-      title: "Cadeira de escritório presidente",
-      price: 3000.0,
-      description:
-        "Vendo cadeira de presidente para escritório, muito confortável",
-      local: "Fortaleza, CE",
-      createdAt: "26/04/2026",
-      slug: "cadeira-presidente",
-    },
-  ];
-
+export default function Anuncios({ produtos }) {
   return (
     <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-xl">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             Anúncios dos nossos usuários
@@ -60,9 +14,9 @@ export default function Anuncios() {
         </div>
         <div className="mt-12">
           <ul className="grid gap-8 lg:grid-cols-2">
-            {team.map((item, idx) => (
-              <Link to={`/${item.slug}-${item.id}`}>
-                <li key={idx} className="gap-8 sm:flex">
+            {produtos.map((item, idx) => (
+              <Link key={idx} to={`/${item.slug}-${item.id}`}>
+                <li className="gap-8 sm:flex">
                   <div className="w-full h-60">
                     <img
                       src={item.photo}

@@ -2,7 +2,7 @@ export default function Footer() {
   const footerNavs = [
     {
       href: "javascript:void()",
-      name: "About",
+      name: "Sobre",
     },
     {
       href: "javascript:void()",
@@ -14,21 +14,21 @@ export default function Footer() {
     },
     {
       href: "javascript:void()",
-      name: "Team",
+      name: "Equipe",
     },
     {
       href: "javascript:void()",
-      name: "Careers",
+      name: "Carreiras",
     },
 
     {
       href: "javascript:void()",
-      name: "Suuport",
+      name: "Suporte",
     },
   ];
 
   return (
-    <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+    <footer className="text-gray-500 bg-white px-4 py-5 max-w-7xl mx-auto md:px-8">
       <div className="max-w-lg sm:mx-auto sm:text-center">
         <img
           src="https://logodownload.org/wp-content/uploads/2016/10/olx-logo-13.png"
@@ -51,7 +51,7 @@ export default function Footer() {
       </ul>
       <div className="mt-8 items-center justify-between sm:flex">
         <div className="mt-4 sm:mt-0">
-          &copy; 2022 Float UI All rights reserved.
+          &copy; 2022 Float UI Todos os direitos reservados.
         </div>
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
