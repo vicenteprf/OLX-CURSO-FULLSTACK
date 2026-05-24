@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Anuncios from "../components/Anuncios";
-import Footer from "../components/Footer";
+import Anuncios from "../../components/anuncios/Anuncios";
+import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 
 export default function InicioPage({ produtos }) {
@@ -10,7 +10,7 @@ export default function InicioPage({ produtos }) {
   const navigation = [
     { title: "Anúncios", path: "/" },
     { title: "Meus Anúncios", path: "/meus-anuncios" },
-    { title: "Política de uso", path: "javascript:void(0)" },
+    { title: "Cadastrar Produto", path: "/novo-produto" },
     { title: "Fale conosco", path: "javascript:void(0)" },
   ];
 
